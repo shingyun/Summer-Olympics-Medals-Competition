@@ -22,9 +22,6 @@ d3.queue()
     .defer(d3.csv, '../Summer-Olympics-Medals-Competition/data/IOC.csv',parseCode)
     .await(function(err, medal, code){
 
-        //console.log(medal);
-        //console.log(code);
-
         //Mine the data to set the scales
         var medalsByYear = d3.nest().key(function(medal){return medal.year})
             .key(function(medal){return medal.discipline})
@@ -33,20 +30,15 @@ d3.queue()
         var axisYear = medalsByYear.map(function(d){
             return d.key;
         });
-        //console.log(axisYear);
 
         var medalsByDiscipline = d3.nest().key(function(medal){return medal.discipline})
             .entries(medal);
-
-        //console.table(medalsByDiscipline);
 
         var axisDiscipline = medalsByDiscipline.map(function(d){
             return d.key;
         });
 
         axisDiscipline.sort().reverse();
-
-        console.log(axisDiscipline);
 
         //Scale
         var scaleX = d3.scaleBand()
@@ -74,15 +66,11 @@ d3.queue()
             .key(function(medal){return medal.discipline})
             .entries(medal);
 
-        console.log(medalsByCountry);
-
         var medals = medalsByYear.map(function(d) {
             return d.values.map(function(e){return e.values.length})
         }).reduce(function(p, c){ return p.concat(c); }, []);
 
         scaleR.domain([0, d3.max(medals)]);
-        //console.log(medalsByCountry);
-        //console.log(medalsByCountry.values);
 
         //draw total medals
         plot.selectAll('.totalMedalsByYear')
@@ -95,7 +83,6 @@ d3.queue()
                 })
               .selectAll('totalMedals')
               .data(function(d){
-                //console.log(d.values);
                 return d.values;})
               .enter()
               .append('circle')
@@ -139,7 +126,6 @@ d3.queue()
 
         //draw
         function draw(data) {
-        //console.log(data);
 
         // UPDATING DATA AND DOM ELEMENTS FOR g.medalsByYear
         var update = plot
@@ -172,7 +158,6 @@ d3.queue()
             .attr('class','medalsBySize')
             .style('fill','3CB4BE')
             .on('mouseenter',function(d){
-                //console.log(d);
                 var tooltip = d3.select('.custom-tooltip')
                     .style('fill','white')
                     .style('opacity',1)
