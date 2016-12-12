@@ -220,8 +220,8 @@ d3.queue()
 
 //import data for axis year
 d3.queue()
-    .defer(d3.csv, '../Final_pro/data/Olympic1972-2008.csv',parseMedal)
-    .defer(d3.csv, '../Final_pro/data/IOC.csv',parseCode)
+    .defer(d3.csv, '../Summer-Olympics-Medals-Competition/data/Olympic1972-2008.csv',parseMedal)
+    .defer(d3.csv, '../Summer-Olympics-Medals-Competition/data/IOC.csv',parseCode)
     .await(function(err, medal, code){
 
        var medalsByYear = d3.nest().key(function(medal){return medal.year})
