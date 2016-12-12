@@ -1,1 +1,0 @@
-# Summer-Olympics-Medals-Competition
