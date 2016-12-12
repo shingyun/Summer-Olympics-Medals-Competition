@@ -1,0 +1,95 @@
+body {
+	background-color:#333333;
+	/*#202020*/
+}
+
+h1 {
+	color:#3CB4BE;
+	font-size: 40px;
+	font-family: 'Helvetica',Helvetica, sans-serif;
+} 
+
+h4 {
+	color:#EEF1EF;
+	font-family: 'Helvetica',Helvetica, sans-serif;
+}
+
+.intro{
+	color:#B7B9B4;
+	font-family: 'Helvetica',Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.year{
+	position:fixed; 
+	bottom: 0px; 
+	right:0px;
+	left:0px;
+	background-color:#3CB4BE;
+}
+
+.dropdown{
+	position:fixed;
+	right:50px;
+
+}
+
+.dropdown-menu{
+	max-height: 450px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.dropdown-menu a{
+    font-size: 12px;
+	font-family: 'Helvetica',Helvetica, sans-serif;
+}
+
+.axis .tick line{
+    stroke:rgb(150,150,150);
+}
+
+.axis .tick line{
+    stroke-width:.5px;
+}
+
+.axis-y text{
+	fill:#B7B9B4;
+	font-size: 15px;
+	text-anchor: end;
+}
+
+.axis-y line{
+	stroke-width:0px;
+}
+
+.axis-y path{
+	stroke-width:0px;
+}
+
+.axis-x text{
+	fill:#444444;
+	font-size: 15px;
+	text-anchor: middle;
+}
+
+.axis-x line{
+	stroke-width:0px;
+}
+.axis-x path{
+	stroke-width:0px;
+}
+
+p .discipline {
+	font-size: 9px;
+	font-family: 'Helvetica',Helvetica, sans-serif;
+	color:#3CB4BE;
+}
+p .value {
+	font-size: 9px;
+	font-family: 'Helvetica',Helvetica, sans-serif;
+	color:#B7B9B4;
+}
+
+
+
