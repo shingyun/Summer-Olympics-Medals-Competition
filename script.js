@@ -258,7 +258,7 @@ function parseCode(d){
     
     return {
         country: d['Country'],
-        ioc: d['Int Olympic Committee code']
+        ioc: d['NOC']
     };
 
 }
