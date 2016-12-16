@@ -204,6 +204,8 @@ d3.queue()
     });
 
 //import data for axis year
+
+
 d3.queue()
     .defer(d3.csv, '../Summer-Olympics-Medals-Competition/data/Olympic1972-2008.csv',parseMedal)
     .defer(d3.csv, '../Summer-Olympics-Medals-Competition/data/IOC.csv',parseCode)
